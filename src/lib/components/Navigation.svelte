@@ -31,6 +31,15 @@
 		</li>
 		<li>
 			<a
+				class={$page.url.pathname === '/consulting' ? 'bg-primary-active-token' : undefined}
+				href="/consulting"
+				on:click={drawerClose}
+			>
+				Consulting
+			</a>
+		</li>
+		<li>
+			<a
 				class={$page.url.pathname === '/academic' ? 'bg-primary-active-token' : undefined}
 				href="/academic"
 				on:click={drawerClose}
@@ -40,17 +49,8 @@
 		</li>
 		<li>
 			<a
-				class={$page.url.pathname === '/autopilot' ? 'bg-primary-active-token' : undefined}
-				href="/autopilot"
-				on:click={drawerClose}
-			>
-				Consulting
-			</a>
-		</li>
-		<li>
-			<a
-				class={$page.url.pathname === '/settings' ? 'bg-primary-active-token' : undefined}
-				href="/settings"
+				class={$page.url.pathname === '/cv' ? 'bg-primary-active-token' : undefined}
+				href="/cv"
 				on:click={drawerClose}
 			>
 				Curriculum Vitae

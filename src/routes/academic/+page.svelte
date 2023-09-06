@@ -1,5 +1,5 @@
 <script>
-  import { TableOfContents } from "@skeletonlabs/skeleton";
+  	import LayoutSidebar from '$lib/layoutSidebar.svelte';
 </script>
 
 <svelte:head>
@@ -7,9 +7,9 @@
   <meta name="description" content="GPT Wrapper" />
 </svelte:head>
 
+<LayoutSidebar>
 <div class="text-column">
   <h1>Academic Endeavor</h1>
-  <TableOfContents target="#title" />
   <div class="main">
     <div class="padding container">
       <h1 id="title">Bachelor Thesis</h1>
@@ -17,7 +17,7 @@
         Web-based Visualization for Exploring Public School Data
       </h2>
       <div id="text">
-        <h4 id="title">Summery</h4>
+        <h2 id="title">Summery</h2>
         <span>
           The bachelor thesis, in abstract terms, tackles the problem of
           gathering a large dataset online, processing it, and presenting the
@@ -42,7 +42,7 @@
         </span>
       </div>
       <div id="text">
-        <h4 id="title">Abstract</h4>
+        <h2 id="title">Abstract</h2>
         <span>
           The Danish government encourages all public schools in Denmark to
           provide as many statistics as possible to The Danish Ministry of
@@ -70,7 +70,7 @@
         </span>
       </div>
       <div id="text">
-        <h4 id="title">Data Gathering Tool</h4>
+        <h2 id="title">Data Gathering Tool</h2>
         <div class="row">
           <div class="col-sm">
             <div class="alignMiddle">
@@ -192,3 +192,4 @@
     </div>
   </div>
 </div>
+</LayoutSidebar>
