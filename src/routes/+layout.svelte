@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from '../lib/resources/svg/aitor.svg?component';
+	import Logo from '../lib/resources/svg/a_white.svg?component';
 
 	import Fa from 'svelte-fa/src/fa.svelte';
 
@@ -91,9 +91,8 @@
 						</svg>
 					</span>
 				</button>
-				<strong class="text-xl uppercase"
-					><Logo width="150px" height="30px" class="fill-token" /></strong
-				>
+				<strong class="text-xl uppercase" style=""><Logo width="30px" height="30px" class="fill-token" /></strong>
+				<strong class="text-xl uppercase" style="margin-left: -5px;">NRS</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<LightSwitch />
