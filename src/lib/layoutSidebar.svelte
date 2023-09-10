@@ -8,7 +8,7 @@
 	// Classes
 	const cBase = 'page-padding flex items-start gap-20 ';
 	const cColLeft = 'page-container-aside';
-	const cColRight = 'sticky top-10 hidden xl:block space-y-4 w-80';
+	const cColRight = 'sticky top-10 hidden xl:block space-y-4';
 
 	// Reactive
 	$: classesBase = `${cBase} ${$$props.class ?? ''}`;
@@ -29,7 +29,7 @@
 		<!-- Ad Position -->
 		<aside class="layout-cols-aside {classesColRight}">
 			<!-- Table of Contents -->
-			<TableOfContents>On the Page</TableOfContents>
+			<TableOfContents class="w-80">On the Page</TableOfContents>
 		</aside>
 	{/if}
 </div>
