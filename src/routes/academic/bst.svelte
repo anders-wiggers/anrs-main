@@ -1,4 +1,6 @@
 <script>
+	// @ts-nocheck
+
 	import { CodeBlock } from '@skeletonlabs/skeleton';
 </script>
 
@@ -40,31 +42,38 @@
 			potential.
 		</span>
 		<h4 class="h4">Data Gathering Tool</h4>
-		<div class="alignMiddle">
-			We approached the challenge of scraping webdata by developing a software layer on top of
-			selenium that can be fed a set of instructions, interpret them, and execute the given
-			commands. The advantage of this approach was maintainability. If a values changed, a new was
-			added we did not need to go into the code and change it. We can simply change the instruction
-			file to accommodate the new changes. Meaning that in future work we could develop more
-			sophisticated detection software which outputs the instruction JSON file.
-		</div>
-		<div class="col-sm">
-			<CodeBlock
-				language="json"
-				code={`{
-	"instructions": [
-		{
-			"get": "https://targetwebsite.com/api"
-		},
-		{
-			"switch": "WebApplicationFrame"
-		},
-		{
-			"wait": 2
-		}
-	]
+
+		<div class="flex flex-col md:flex-row pb-4">
+			<div class="w-full md:w-1/3 flex items-center justify-center">
+				<p>
+					We approached the challenge of scraping web data by developing a software layer on top of
+					Selenium that can be fed a set of instructions, interpret them, and execute the given
+					commands. The advantage of this approach was maintainability. If a value changed, a new
+					one was added, we did not need to go into the code and change it. We can simply change the
+					instruction file to accommodate the new changes. Meaning that in future work, we could
+					develop more sophisticated detection software which outputs the instruction JSON file.
+				</p>
+			</div>
+			<div class="w-full md:w-2/3 flex items-center justify-center">
+				<div class="p-6">
+					<CodeBlock
+						language="json"
+						code={`{
+  "instructions": [
+    {
+      "get": "https://targetwebsite.com/api"
+    },
+    {
+      "switch": "WebApplicationFrame"
+    },
+    {
+      "wait": 2
+    }
+  ]
 }`}
-			/>
+					/>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="text">
@@ -78,17 +87,27 @@
 			data-driven metrics. This scent lowers the "cost" of information gathering and improves
 			exploration of the set.
 		</p>
-		<div class="row">
-			<div class="col-4">
-				<img class="img" src="/images/fitlering.png" />
+		<div class="flex flex-col md:flex-row">
+			<div class="w-full md:w-1/3 flex items-center justify-center">
+				<img src="/images/fitlering.png" class="w-full" alt="Image" />
 			</div>
-			<div class="col-8">
-				<video onloadedmetadata="this.muted = true" autoPlay loop muted playsInline class="vid">
-					<source src="/videos/filteringhd.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
+			<div class="w-full md:w-2/3 flex items-center justify-center">
+				<div class="p-6">
+					<video
+						onloadedmetadata="this.muted = true"
+						autoplay
+						loop
+						muted
+						playsinline
+						class="w-full p-2"
+					>
+						<source src="/videos/filteringhd.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
 		</div>
+
 		<h5 class="h5">Relating diffrend data points</h5>
 		<div>
 			<p>
@@ -100,26 +119,44 @@
 				comparisons that we as developers can think of
 			</p>
 		</div>
-		<div class="row">
-			<div class="col-4">
-				<img class="img" src="/images/relation.png" />
+		<div class="flex flex-col md:flex-row pb-4">
+			<div class="w-full md:w-1/3 flex items-center justify-center">
+				<img src="/images/relation.png" class="w-full" alt="Image" />
 			</div>
-			<div class="col-8">
-				<video onloadedmetadata="this.muted = true" autoPlay loop muted playsInline class="vid">
-					<source src="/videos/relation.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
+			<div class="w-full md:w-2/3 flex items-center justify-center">
+				<div class="p-6">
+					<video
+						onloadedmetadata="this.muted = true"
+						autoplay
+						loop
+						muted
+						playsinline
+						class="w-full p-2"
+					>
+						<source src="/videos/relation.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
 		</div>
+
 		<div>
-			<p class="gitlink">
-				The full project can be found at github:&nbsp;
-				<a href="https://github.com/anders-wiggers/visualization-of-school-data/" target="_blank">
+			<p class="text-center">
+				The full project can be found at GitHub:
+				<a
+					href="https://github.com/anders-wiggers/visualization-of-school-data/"
+					target="_blank"
+					class="text-blue-500 hover:underline"
+				>
 					<i class="fab fa-github" />
 					Visualization Web Application
 				</a>
-				&nbsp;The Thesis is avaible here:&nbsp;
-				<a href="/comn_res/bsc_thesis_public_school_data.pdf" target="_blank">
+				The Thesis is available here:
+				<a
+					href="/comn_res/bsc_thesis_public_school_data.pdf"
+					target="_blank"
+					class="text-blue-500 hover:underline"
+				>
 					<i class="fas fa-copy" />
 					Bachelor Thesis
 				</a>
@@ -127,3 +164,14 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	/* Apply padding to all headers */
+	h2,
+	h3,
+	h4,
+	h5 {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+	}
+</style>

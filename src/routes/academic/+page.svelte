@@ -17,6 +17,8 @@
 	</header>
 	<hr />
 	<SectionMst />
+	<hr />
 	<SectionBst />
+	<hr />
 	<SectionPuf />
 </LayoutSidebar>
