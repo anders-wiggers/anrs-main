@@ -1,27 +1,18 @@
 <script lang="ts">
 	import AitorLogo from '../lib/resources/svg/a_white.svg?component';
 </script>
+
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center">
-		<h2 class="font-bold">Welcome to my Personal Site</h2>
+		<h2 class="font-bold h2">Welcome to my Personal Site</h2>
 		<!-- Animated Logo -->
 		<figure>
 			<section class="img-bg" />
-			<AitorLogo class="fill-token" width="100%" height="100%"></AitorLogo>
+			<AitorLogo class="fill-token" width="100%" height="100%" />
 		</figure>
 		<!-- / -->
-		<div class="flex justify-center space-x-2">
-			<a
-				class="btn btn-filled"
-				href="https://skeleton.dev/"
-				target="_blank"
-				rel="noreferrer"
-			>
-				Launch Documentation
-			</a>
-		</div>
 		<div class="space-y-2">
 			<p>Gather your API keys to begin the automation adventure:</p>
 			<p><code>/ChatGPT</code></p>
@@ -41,8 +32,7 @@
 	}
 	.img-bg {
 		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
-		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite,
-			glow 5s linear infinite;
+		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite, glow 5s linear infinite;
 	}
 	@keyframes glow {
 		0% {

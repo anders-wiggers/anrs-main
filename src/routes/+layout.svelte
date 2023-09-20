@@ -13,6 +13,8 @@
 
 	import type { ModalComponent } from '@skeletonlabs/skeleton';
 
+	import Footer from '$lib/components/Footer/Footer.svelte';
+
 	let isOsMac = false;
 
 	// Set Search Keyboard Shortcut
@@ -91,7 +93,9 @@
 						</svg>
 					</span>
 				</button>
-				<strong class="text-xl uppercase" style=""><Logo width="30px" height="30px" class="fill-token" /></strong>
+				<strong class="text-xl uppercase" style=""
+					><Logo width="30px" height="30px" class="fill-token" /></strong
+				>
 				<strong class="text-xl uppercase" style="margin-left: -5px;">NRS</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
@@ -117,5 +121,9 @@
 	<div class="container p-10 mx-auto">
 		<slot />
 	</div>
+	<svelte:fragment slot="pageFooter">
+		<Footer />
+	</svelte:fragment>
+
 	<!-- ---- / ---- -->
 </AppShell>

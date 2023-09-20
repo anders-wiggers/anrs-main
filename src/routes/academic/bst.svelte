@@ -27,19 +27,21 @@
 			as possible to The Danish Ministry of Education and Research to store, analyze, and publish on
 			uddannelsesstatistik.dk. Navigating the aforementioned website and exploring the data provided
 			is a labor-intensive and a non-user-friendly task. The data is spread across multiple sites
-			and difficult to work with. By identifying the users' requirements in the context of searching
-			for information on public school data, we discovered a demand for a platform that allows users
-			to easily navigate and explore such data. In the process of conceptualizing such an
-			application, we found the literature insufficient in terms of presenting a general solution to
-			visualize heterogeneous data sets to a broad user group. From this we formulated our
-			hypothesis: Can we solve to the challenge of visualizing heterogeneous data sets to a broad
-			user group by developing and implementing a framework that generalizes a solution the
-			challenge. This resulted in the creation of the DEEVA Framework, that aims to support
-			developers in the process of building visualization applications. To confirm or disprove the
-			hypothesis, we created an application with a user-friendly interface that facilitates data
-			exploration with a focus on the iterative process. Results from the evaluation confirmed our
-			hypothesis. However further iterations of the framework are needed to fully realize its
-			potential.
+			and difficult to work with.
+			<br /><br />
+			By identifying the users' requirements in the context of searching for information on public school
+			data, we discovered a demand for a platform that allows users to easily navigate and explore such
+			data. In the process of conceptualizing such an application, we found the literature insufficient
+			in terms of presenting a general solution to visualize heterogeneous data sets to a broad user
+			group.
+			<br /><br />
+			From this we formulated our hypothesis: Can we solve to the challenge of visualizing heterogeneous
+			data sets to a broad user group by developing and implementing a framework that generalizes a solution
+			the challenge. This resulted in the creation of the DEEVA Framework, that aims to support developers
+			in the process of building visualization applications. To confirm or disprove the hypothesis, we
+			created an application with a user-friendly interface that facilitates data exploration with a
+			focus on the iterative process. Results from the evaluation confirmed our hypothesis. However further
+			iterations of the framework are needed to fully realize its potential.
 		</span>
 		<h4 class="h4">Data Gathering Tool</h4>
 
@@ -48,10 +50,12 @@
 				<p>
 					We approached the challenge of scraping web data by developing a software layer on top of
 					Selenium that can be fed a set of instructions, interpret them, and execute the given
-					commands. The advantage of this approach was maintainability. If a value changed, a new
-					one was added, we did not need to go into the code and change it. We can simply change the
-					instruction file to accommodate the new changes. Meaning that in future work, we could
-					develop more sophisticated detection software which outputs the instruction JSON file.
+					commands.
+					<br /><br />
+					The advantage of this approach was maintainability. If a value changed, a new one was added,
+					we did not need to go into the code and change it. We can simply change the instruction file
+					to accommodate the new changes. Meaning that in future work, we could develop more sophisticated
+					detection software which outputs the instruction JSON file.
 				</p>
 			</div>
 			<div class="w-full md:w-2/3 flex items-center justify-center">
@@ -89,6 +93,7 @@
 		</p>
 		<div class="flex flex-col md:flex-row">
 			<div class="w-full md:w-1/3 flex items-center justify-center">
+				<!-- svelte-ignore a11y-img-redundant-alt -->
 				<img src="/images/fitlering.png" class="w-full" alt="Image" />
 			</div>
 			<div class="w-full md:w-2/3 flex items-center justify-center">
@@ -142,23 +147,23 @@
 
 		<div>
 			<p class="text-center">
-				The full project can be found at GitHub:
+				the full project can be found at github:
 				<a
 					href="https://github.com/anders-wiggers/visualization-of-school-data/"
 					target="_blank"
 					class="text-blue-500 hover:underline"
 				>
 					<i class="fab fa-github" />
-					Visualization Web Application
+					visualization web application
 				</a>
-				The Thesis is available here:
+				the thesis is available here:
 				<a
 					href="/comn_res/bsc_thesis_public_school_data.pdf"
 					target="_blank"
 					class="text-blue-500 hover:underline"
 				>
 					<i class="fas fa-copy" />
-					Bachelor Thesis
+					bachelor thesis
 				</a>
 			</p>
 		</div>
