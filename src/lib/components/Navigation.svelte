@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
-
+	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 	const drawerStore = getDrawerStore();
 	import { page } from '$app/stores';
 
@@ -38,6 +38,22 @@
 				Consulting
 			</a>
 		</li>
+		<Accordion >
+			<AccordionItem>
+				<svelte:fragment slot="summary">Project</svelte:fragment>
+				<svelte:fragment slot="content">
+					<li>
+						<a
+							class={$page.url.pathname.startsWith('/projects') ? 'bg-primary-active-token' : undefined}
+							href="/projects/tda"
+							on:click={drawerClose}
+						>
+							Tour De Azeroth
+						</a>
+					</li>	
+				</svelte:fragment>
+			</AccordionItem>
+		</Accordion>
 		<li>
 			<a
 				class={$page.url.pathname === '/academic' ? 'bg-primary-active-token' : undefined}

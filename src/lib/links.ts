@@ -1,48 +1,58 @@
 export type List = Array<{ href: string; label: string; keywords: string; badge?: string }>;
 export const menuNavLinks: Record<string, Array<{ title: string; list: List }>> = {
-	'/chatgpt': [
+	'/software': [
 		{
-			title: 'GPT Wrapper',
+			title: 'Open Sourced Software',
 			list: [
-				{ href: '/chatgpt', label: 'GPT Wrapper', keywords: 'gpt, wrapper, chatgpt' },
-				{ href: '/chatgpt/introduction', label: 'Introduction', keywords: 'svelte, sirens, license, release' },
+				{ href: '/chatgpt', label: 'GPT Wrapper', keywords: 'gpt, wrapper, chatgpt' }
+			]
+		}
+	],
+	'/consulting': [
+		{
+			title: 'Consultancy',
+			list: [
 				{
-					href: '/chatgpt/get-started',
-					label: 'Get Started',
-					keywords: 'start, install, cli, tailwind, themes, stylesheets'
+					href: '/consulting',
+					label: 'Consultancy',
+					keywords: 'consulting, work, cms, azure'
 				}
 			]
 		}
 	],
-	'/autopilot': [
+	'/academic': [
 		{
-			title: 'AutoPilot',
+			title: 'Academic Endeavor',
+			list: [
+				{ href: '/academic', label: 'Academic Achivments', keywords: 'academic, com' },
+				{
+					href: '/academic#master-thesis',
+					label: 'Master Thesis',
+					keywords: 'distributed systems, system security, non fungble token'
+				},
+				{
+					href: '/academic#bachelor-thesis',
+					label: 'Bachelor Thesis',
+					keywords: 'data viz, data visualization, public school, data gathering'
+				},
+				{
+					href: '/academic#phystically-uncloneable-functions',
+					label: 'Phystically Uncloneable Functions',
+					keywords: 'system security, puf'
+				},
+			]
+		}
+	],
+	'/cv': [
+		{
+			title: 'Curriculum Vitae',
 			list: [
 				{
-					href: '/autopilot',
-					label: 'AutoPilot',
-					keywords: 'body, scroll, scrollbar, hr, horizontal, rule, divider'
+					href: '/cv',
+					label: 'Curriculum Vitae',
+					keywords: ''
 				}
 			]
 		}
 	],
-	'/settings': [
-		{
-			title: 'Settings',
-			list: [
-				{ href: '/settings', label: 'Settings', keywords: 'copy, contenteditable, html, input' },
-				{
-					href: '/settings?open=api',
-					label: 'API Mangement',
-					keywords: 'svg, filtering, image, images, effect'
-				},
-				{
-					href: '/settings?open=wrapper',
-					label: 'GPT Wrapper Settings',
-					keywords: 'form, modal, a11y, accessibility, keyboard, interaction'
-				},
-				{ href: '/settings?open=pilot', label: 'AutoPilot Settings', keywords: 'settings, autopilot' }
-			]
-		}
-	]
 };

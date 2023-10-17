@@ -4,6 +4,11 @@
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
+<svelte:head>
+	<title>Building solutions that empowers people!</title>
+	<meta name="description" content="Personal CV for Anders Wiggers" />
+</svelte:head>
+
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center">
 		<h2 class="font-bold h2">Welcome to my Personal Site</h2>
@@ -14,10 +19,22 @@
 		</figure>
 		<!-- / -->
 		<div class="space-y-2">
-			<p>Gather your API keys to begin the automation adventure:</p>
-			<p><code>/ChatGPT</code></p>
-			<p><code>/LinkedIn</code></p>
-			<p><code>/Facebook</code></p>
+			<p>On this site you will find information about my:</p>
+			<a 
+			href="/software" 
+			>
+			<p><code>/OpenSourceSoftware</code></p>
+			</a>
+			<a 
+			href="/consulting" 
+			>
+			<p><code>/Consultancy</code></p>
+			</a>
+			<a 
+			href="/academic" 
+			>
+			<p><code>/AcademicWork</code></p>
+			</a>
 		</div>
 	</div>
 </div>

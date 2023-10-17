@@ -92,7 +92,7 @@
 			<div class="flex space-x-4">
 				<a
 					class="btn variant-soft"
-					href="https://github.com/skeletonlabs/skeleton"
+					href="https://github.com/anders-wiggers"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -101,7 +101,7 @@
 				</a>
 				<a
 					class="btn variant-soft"
-					href="https://discord.gg/EXqV7W8MtY"
+					href="https://discordapp.com/users/293841860009656320"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -110,7 +110,7 @@
 				</a>
 				<a
 					class="btn variant-soft"
-					href="https://twitter.com/SkeletonUI"
+					href="https://twitter.com/stdioh_a"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -119,12 +119,12 @@
 				</a>
 				<a
 					class="btn variant-soft"
-					href="https://www.youtube.com/@skeletonlabs"
+					href="https://www.linkedin.com/in/anders-wiggers/"
 					target="_blank"
 					rel="noreferrer"
 				>
-					<i class="fa-brands fa-youtube" />
-					<span class="hidden md:inline-block ml-2">YouTube</span>
+					<i class="fa-brands fa-linkedin" />
+					<span class="hidden md:inline-block ml-2">LinkedIn</span>
 				</a>
 			</div>
 		</section>

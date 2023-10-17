@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>AutoPilot</title>
+	<title>Open Sourced Software</title>
 	<meta name="description" content="AutoPilot" />
 </svelte:head>
 

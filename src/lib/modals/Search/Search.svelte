@@ -19,9 +19,10 @@
 	// Local
 	let searchTerm = '';
 	let resultsCopy = [
-		...menuNavLinks['/chatgpt'],
-		...menuNavLinks['/autopilot'],
-		...menuNavLinks['/settings']
+		...menuNavLinks['/software'],
+		...menuNavLinks['/consulting'],
+		...menuNavLinks['/academic'],
+		...menuNavLinks['/cv']
 	];
 	let results = resultsCopy;
 

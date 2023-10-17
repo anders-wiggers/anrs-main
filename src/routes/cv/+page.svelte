@@ -18,8 +18,8 @@
 </script>
 
 <svelte:head>
-	<title>Settings</title>
-	<meta name="description" content="Settings for Aitor" />
+	<title>CV</title>
+	<meta name="description" content="Personal CV for Anders Wiggers" />
 </svelte:head>
 
 <div class="text-column">
