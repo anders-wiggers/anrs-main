@@ -4,7 +4,24 @@ export const menuNavLinks: Record<string, Array<{ title: string; list: List }>> 
 		{
 			title: 'Open Sourced Software',
 			list: [
-				{ href: '/chatgpt', label: 'GPT Wrapper', keywords: 'gpt, wrapper, chatgpt' }
+				{ href: '/software', label: 'Open Sourced Software Repository', keywords: '' }
+			]
+		}
+	],
+	'/projects': [
+		{
+			title: 'Projects',
+			list: [
+				{
+					href: '/projects/tda',
+					label: 'Tour de Azeroth',
+					keywords: 'server, world of warcraft'
+				},
+				{
+					href: '/projects/ccc',
+					label: 'Christmas Calender Checker',
+					keywords: 'deep learning, computer vision'
+				},
 			]
 		}
 	],
@@ -15,7 +32,7 @@ export const menuNavLinks: Record<string, Array<{ title: string; list: List }>> 
 				{
 					href: '/consulting',
 					label: 'Consultancy',
-					keywords: 'consulting, work, cms, azure'
+					keywords: 'consulting, work, cms, azure, cloud, cloud engineering'
 				}
 			]
 		}

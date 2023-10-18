@@ -6,6 +6,7 @@
 	import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 	import DocsSearch from '$lib/modals/Search/Search.svelte';
+	import CookieCenter from '$lib/components/CookieCenter/CookieCenter.svelte';
 
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
 
@@ -24,7 +25,8 @@
 	}
 
 	const modalComponentRegistry: Record<string, ModalComponent> = {
-		modalSearch: { ref: DocsSearch }
+		modalSearch: { ref: DocsSearch },
+		modalCookie: { ref: CookieCenter }
 	};
 
 	import '../app.postcss';
@@ -49,6 +51,15 @@
 		drawerStore.open();
 	}
 
+	function triggerCookieCenter(): void {
+		const modal: ModalSettings = {
+			type: 'component',
+			component: 'modalCookie',
+			position: 'item-start'
+		};
+		modalStore.trigger(modal);
+	}
+
 	// Search
 	function triggerSearch(): void {
 		const modal: ModalSettings = {
@@ -61,11 +72,19 @@
 
 	// Keyboard Shortcut (CTRL/⌘+Space) to Focus Search
 	function onWindowKeydown(e: KeyboardEvent): void {
-		if ((e.metaKey || e.ctrlKey) && e.key === ' ') {
+		if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
 			// Prevent default browser behavior of focusing URL bar
 			e.preventDefault();
 			// If modal currently open, close modal (allows to open/close search with CTRL/⌘+K)
 			$modalStore.length ? modalStore.close() : triggerSearch();
+		}
+	}
+
+	export let data;
+	$: {
+		let cookieCenter = data;
+		if (cookieCenter['cookieState'] === undefined) {
+			triggerCookieCenter();
 		}
 	}
 </script>
@@ -80,11 +99,11 @@
 	<Navigation />
 </Drawer>
 
-<AppShell slotSidebarLeft="w-0 md:w-52 bg-surface-500/10">
+<AppShell slotSidebarLeft="w-0 xl:w-72 bg-surface-500/10">
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<button class="md:hidden btn btn-sm mr-4" on:click={drawerOpen}>
+				<button class="xl:hidden btn btn-sm mr-4" on:click={drawerOpen}>
 					<span>
 						<svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
 							<rect width="100" height="20" />
@@ -100,14 +119,13 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<LightSwitch />
-				<div class="md:inline md:ml-4">
+				<div class="xl:inline xl:ml-4">
 					<button
 						class="btn p-2 px-4 space-x-4 variant-soft hover:variant-soft-primary"
 						on:click={triggerSearch}
 					>
 						<Fa icon={faSearch} />
-						<span class="hidden md:inline-block badge variant-soft"
-							>{isOsMac ? '⌘' : 'Ctrl'}+Space</span
+						<span class="hidden xl:inline-block badge variant-soft">{isOsMac ? '⌘' : 'Ctrl'}+K</span
 						>
 					</button>
 				</div>

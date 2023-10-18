@@ -38,19 +38,34 @@
 				Consulting
 			</a>
 		</li>
-		<Accordion >
+		<Accordion>
 			<AccordionItem>
 				<svelte:fragment slot="summary">Project</svelte:fragment>
 				<svelte:fragment slot="content">
+					<ul>
+						<li>
+							<a
+								class={$page.url.pathname.startsWith('/projects/tda')
+									? 'bg-primary-active-token'
+									: undefined}
+								href="/projects/tda"
+								on:click={drawerClose}
+							>
+								Tour De Azeroth
+							</a>
+						</li>
+					</ul>
 					<li>
 						<a
-							class={$page.url.pathname.startsWith('/projects') ? 'bg-primary-active-token' : undefined}
-							href="/projects/tda"
+							class={$page.url.pathname.startsWith('/projects/ccc')
+								? 'bg-primary-active-token'
+								: undefined}
+							href="/projects/ccc"
 							on:click={drawerClose}
 						>
-							Tour De Azeroth
+							Check Christmas Calendar
 						</a>
-					</li>	
+					</li>
 				</svelte:fragment>
 			</AccordionItem>
 		</Accordion>

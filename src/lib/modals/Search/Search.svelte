@@ -21,6 +21,7 @@
 	let resultsCopy = [
 		...menuNavLinks['/software'],
 		...menuNavLinks['/consulting'],
+		...menuNavLinks['/projects'],
 		...menuNavLinks['/academic'],
 		...menuNavLinks['/cv']
 	];
