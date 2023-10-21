@@ -75,7 +75,7 @@
 			profilePic: '/images/cv/logo/au.jpg'
 		},
 		{
-			title: 'Teaching Assistant in Experimental System Development',
+			title: 'Teaching Assistant in Web of Things',
 			place: 'Department of Computer Science',
 			position: 'Part-time',
 			start: '01-08-2020',
