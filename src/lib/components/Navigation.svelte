@@ -13,8 +13,8 @@
 	<ul>
 		<li>
 			<a
-				class={$page.url.pathname === '/' ? 'bg-primary-active-token' : undefined}
-				href="/"
+				class={$page.url.pathname === '/' || $page.url.pathname === '/home' ? 'bg-primary-active-token' : undefined}
+				href="/home"
 				on:click={drawerClose}
 			>
 				Home

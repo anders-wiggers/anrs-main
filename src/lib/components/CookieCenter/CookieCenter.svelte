@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { faL } from '@fortawesome/free-solid-svg-icons';
 	import { getModalStore } from '@skeletonlabs/skeleton';
 
 	const modalStore = getModalStore();
@@ -50,7 +51,7 @@
 
 		// Deserialize a JSON string to create an object
 		static deserialize(jsonString: string): CookieContainer {
-			if (jsonString === '') return new CookieContainer(true, true, true, true);
+			if (jsonString === '') return new CookieContainer(false, false, false, false);
 			const obj = JSON.parse(jsonString);
 			return new CookieContainer(obj.pref, obj.stats, obj.mark, obj.unclassified);
 		}
@@ -75,23 +76,44 @@
 		}
 	});
 
+	function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+
+	async function closeStoreWithTimeToSeeChange(){
+		await sleep(300);
+    	modalStore.close();
+	}
+
+	function setLocalSettings(prefIn, statsIn, markIn, unclassifiedIn){
+		pref = prefIn;
+		stats = statsIn;
+		mark = markIn;
+		unclassified = unclassifiedIn;
+	}
+
 	function acceptAll() {
 		let container = new CookieContainer(true, true, true, true);
+		setLocalSettings(true,true,true,true)
+
 		let serialized = container.serialize();
 		document.cookie = 'anrs-cookie=' + serialized + '; path=/';
-		modalStore.close();
+
+		closeStoreWithTimeToSeeChange();
 	}
 	function rejectAll() {
 		let container = new CookieContainer(false, false, false, false);
+		setLocalSettings(false,false,false,false)
 		let serialized = container.serialize();
 		document.cookie = 'anrs-cookie=' + serialized + '; path=/';
-		modalStore.close();
+		closeStoreWithTimeToSeeChange();
 	}
 	function updateCookies() {
 		let container = new CookieContainer(pref, stats, mark, unclassified);
 		let serialized = container.serialize();
 		document.cookie = 'anrs-cookie=' + serialized + '; path=/';
-		modalStore.close();
+		closeStoreWithTimeToSeeChange();
 	}
 
 	function loadCookies() {}
