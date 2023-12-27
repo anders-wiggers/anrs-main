@@ -28,14 +28,14 @@
 
 	let cvJson = [
 		{
-			title: 'Software Development Consultant',
-			place: 'Immeo P/S',
+			title: 'Data Science Engineer',
+			place: 'PFA Pension',
 			position: 'Full-time',
-			start: '01-09-2022',
+			start: '01-12-2023',
 			end: 'Current',
 			location: 'København, Hovedstaden, Danmark',
-			disc: 'Testdrevet udvikling · Microsoft Azure · C# · Microservices',
-			profilePic: '/images/cv/logo/immeo.jpg'
+			disc: 'AI · Platoform Development · Kuberneties · Python · R · Microservices',
+			profilePic: '/images/cv/logo/pfa.png'
 		},
 		{
 			title: 'Freelance Software Engineer',
@@ -46,6 +46,16 @@
 			location: 'København, Hovedstaden, Danmark',
 			disc: 'CMS · Microsoft Azure · C# · Git · Docker · Webudvikling',
 			profilePic: '/images/cv/logo/anrs.png'
+		},
+		{
+			title: 'Software Development Consultant',
+			place: 'Immeo P/S',
+			position: 'Full-time',
+			start: '01-09-2022',
+			end: '01-12-2023',
+			location: 'København, Hovedstaden, Danmark',
+			disc: 'Testdrevet udvikling · Microsoft Azure · C# · Microservices',
+			profilePic: '/images/cv/logo/immeo.jpg'
 		},
 		{
 			title: 'Teaching Assistant in Experimental System Development',
